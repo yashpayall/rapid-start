@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Praise&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: porter-sans;
+  src: url(../src/assets/font/porter-sans-block/porter-sans-inline-block-webfont.ttf);
+}
+
+/* kismat styles start */
+.rapid {
+  background: linear-gradient(91deg, #865cf6 3.15%, #ff6c5a 98.68%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.remove-arrow::-webkit-inner-spin-button,
+.remove-arrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.remove-arrow {
+  -moz-appearance: textfield;
+}
+/* kismat styles end */
+
+/* calendar scrollbar start */
+.rbc-calendar .rbc-time-view .rbc-time-content::-webkit-scrollbar {
+  width: 6px;
+}
+.rbc-calendar .rbc-time-view .rbc-time-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.rbc-calendar .rbc-time-view .rbc-time-content::-webkit-scrollbar-thumb {
+  background: #a565ff;
+  border-radius: 6px;
+}
+
+/* styling the schedule calendar scrollbar */
+.big-calendar::-webkit-scrollbar {
+  height: 6px;
+}
+.big-calendar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.big-calendar::-webkit-scrollbar-thumb {
+  background: #a565ff;
+  border-radius: 6px;
+}
+
+/* hide green line in event scheduler start */
+.rbc-current-time-indicator {
+  display: none;
+}
+
+/* styles for schedule calendar start */
+.rbc-calendar .rbc-time-view .rbc-time-header.rbc-overflowing {
+  margin-right: 6px !important;
+  border: 0;
+}
+
+.rbc-calendar {
+  padding: 0px;
+  background: white;
+  box-shadow: 0 0 8px 2px gray;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  color: #6d758f;
+}
+
+/* calender timeview start */
+.rbc-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+.rbc-header.rbc-today {
+  background-color: white;
+}
+.rbc-time-view .rbc-time-gutter.rbc-time-column * {
+  border: none !important;
+  color: #868095;
+  font-size: 14px;
+  font-weight: 400;
+}
+.rbc-time-view .rbc-timeslot-group .rbc-time-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  background: white;
+}
+.rbc-time-view .rbc-timeslot-group .rbc-time-slot:last-child {
+  display: none !important;
+}
+.rbc-time-view .rbc-timeslot-group .rbc-time-slot .rbc-label {
+  padding: 0;
+}
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  margin-right: 17px;
+}
+.rbc-time-view .rbc-time-content {
+  border: none;
+}
+.rbc-day-slot * {
+  border-color: #e1e4ed !important;
+}
+.rbc-day-slot.rbc-time-column.rbc-now.rbc-today {
+  background-color: transparent;
+}
+.rbc-time-view .rbc-time-content .rbc-events-container {
+  margin-right: 0;
+}
+/* styling the event show div */
+.rbc-time-view .rbc-time-content .rbc-events-container .rbc-event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+.rbc-time-view
+  .rbc-time-content
+  .rbc-events-container
+  .rbc-event
+  .rbc-event-label {
+  display: none;
+}
+
+.rbc-time-view
+  .rbc-time-content
+  .rbc-events-container
+  .rbc-event
+  .rbc-event-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* current day in the week view */
+.rbc-time-view .rbc-allday-cell .rbc-day-bg.rbc-today {
+  background: #e1e4ed;
+}
+
+/* styling months */
+.rbc-month-view {
+  border-left: 0px !important;
+}
+/* current date in month */
+.rbc-month-view .rbc-date-cell.rbc-now.rbc-current {
+  background: transparent;
+  font-weight: 400;
+}
+/* padding in row-segment in month view */
+.rbc-month-view .rbc-row-segment {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+/* event in month */
+.rbc-month-view .rbc-row-segment .rbc-event {
+  padding: 0px;
+  border-radius: 4px;
+  background-color: red;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+.rbc-month-view .rbc-day-bg.rbc-today {
+  background: #e1e4ed;
+}
+/* date colors in month */
+.rbc-month-view .rbc-row .rbc-date-cell {
+  color: #6d758f;
+  display: flex;
+  padding: 0 !important;
+  padding-top: 6px !important;
+  padding-left: 12px !important;
+  margin-bottom: 8px;
+  justify-content: flex-start;
+}
+.rbc-off-range-bg {
+  background-color: white !important;
+}
+/* more button in event in month view */
+.rbc-button-link.rbc-show-more {
+  background: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b4b9c9;
+}
+/* styling only dates not of this month */
+.rbc-month-view .rbc-date-cell.rbc-off-range {
+  background: transparent;
+  color: #b4b9c9;
+}
+/* event cell in the list/agenda */
+.rbc-agenda-event-cell {
+  padding: 0 !important;
+}
+
+/* agenda/list view */
+.rbc-agenda-view .rbc-agenda-table thead {
+  display: none;
+}
+/* above are the styles for schedule calendar end */
+
+/* date picker */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+/* yakshit styling start */
+.apexcharts-xcrosshairs,
+.apexcharts-active .apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 0 !important;
+}
+
+.apexcharts-yaxis {
+  padding-right: 35px !important;
+}
+
+.apexcharts-series-markers-wrap.apexcharts-hidden-element-shown {
+  visibility: hidden;
+}
+
+.apexcharts-canvas.apexchartszcaizrdrh.apexcharts-theme-light {
+  max-width: 944px !important;
+  width: 100% !important;
+}
+/* yakshit styling end */
